@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: rgb(177, 218, 255);
-    width: 100%;
+
+body{ 
+    background: linear-gradient(to bottom, #6b10fc, #dea8ff) fixed;
 }
 
 .containerp{
@@ -13,8 +13,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgb(126, 195, 255);
-    
+    width: 100%;
 }
 
 .tituloE{
@@ -23,55 +22,60 @@ body{
 }
 
 form{
-    width: 20% auto;
-    height: 300px auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(177, 214, 247);
-    border-radius: 5px;
-    box-shadow: 1px 1px 6px 1px;
+    width: 100%;
+    max-width: 600px;
+    height: auto; 
+    margin: 0 2%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: 0px 0px 15px 2px;
 }
+
 .formC{
-    width: 20%;
-    height: 300px;
+    width: 100%; 
+    max-width: 600px; 
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(177, 214, 247);
-    border-radius: 5px;
-    box-shadow: 1px 1px 6px 1px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: 0px 0px 15px 2px;
 }
 
-input{
-    width: 80%;
-    height: 25px;
-    text-align: center;
+.botaoConsulta{
+    width: 100%;
+    height: 40px;
 }
 
-.botaoCadastrar{
+.botaoConsulta a{
+    float: right;
     width: 30%;
-    transition: all 0.3s;
-    height: 25px;
-    font-weight: bold;
-    border-radius: 3px;
-    border: 0;
-    cursor: pointer;
-    background-color: rgb(236, 236, 236);
-    margin: 3px;
-    
-}
-
-.botaoCadastrar:hover{
-    box-shadow: 1px 1px 7px 1px;
-    background-color: #FFF;
-}
-
-.botaoCadastrar a{
+    height: 30px;
     text-decoration: none;
-    color: black;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.botaoConsulta button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ab79fc;
+    color: #FFF;
+    border: 0;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.botaoConsulta button:hover{
+    background-color: #7b33f0;
 }
 
 .navegacao{
@@ -85,5 +89,56 @@ input{
     width: 100%;
     display: flex;
     justify-content: center;
+    gap: 1%;
 }
+
+.inputC{
+    border: 0;
+    border-bottom: #7b33f0 1px solid;
+    text-align: left;
+    padding: 0 2%;
+    outline: none;
+    font-size: 16px;
+    width: 80%;
+    height: 30px;
+    margin: 1%;
+}
+
+.titulo{
+    color: #7b33f0;
+    width: 80%;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: monospace;
+}
+.botaoCadastrar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 35px 0;
+}
+.botaoCadastrar a{
+    width: 25%;
+    height: 38px;
+    border-radius: 4px;
+}
+
+.botaoCadastrar button{
+    background-color: #ab79fc;
+    color: #FFF;
+    border: 0;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.botaoCadastrar button:hover{
+    background-color: #7b33f0;
+}
+
 

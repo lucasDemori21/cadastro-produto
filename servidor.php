@@ -6,4 +6,3 @@ $banco = "estoque";
 
 $connect = new mysqli($ip, $nome, $senha, $banco);
 ?>
-

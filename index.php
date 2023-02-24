@@ -9,20 +9,28 @@
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
 </head>
+
 <body>
     <div class="containerp">
 
-        <form class="formC" action="listar.php" method="POST">
-            <div class="navegacao">
-                <button class="botaoCadastrar"><a href="index.php">Cadastrar</a></button>
-                <button class="botaoCadastrar"><a href="consulta.php">Consultar</a></button>
+        <form class="formC" name="frmcadastrar" action="listar.php" method="POST" onsubmit="return exibirStatus()">
+            <div class="botaoConsulta">
+                <a href="consulta.php"><button type="button">Consultar</button></a>
             </div>
-            <input type="text" id="nomeProduto" name="nomeProduto" placeholder="Nome do produto"><br />
-            <input type="text" id="preco" name="preco" placeholder="Preço do produto"><br />
-            <input type="text" id="codigo" name="codigo" placeholder="Código do produto"><br /><br />
-    
-            <button class="botaoCadastrar" type="submit" onclick="exibirStatus()">Cadastrar</button>
+            <div class="titulo">
+                <legend>CADASTRAR PRODUTO</legend>
+            </div>
+
+            <input class="inputC" type="text" id="nomeProduto" name="nomeProduto" placeholder="Digite o nome do produto"><br />
+            <input class="inputC" type="text" id="preco" name="preco" placeholder="Digite o  preço do produto"><br />
+            <input class="inputC" type="text" id="codigo" name="codigo" placeholder="Crie um código para seu produto"><br />
+
+            <div class="botaoCadastrar">
+                <a><button type="submit">Cadastrar</button></a><br>
+            </div>
+
         </form>
     </div>
 </body>
+
 </html>

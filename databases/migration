@@ -5,7 +5,7 @@ CREATE DATABASE estoque;
 USE estoque;
 
 CREATE TABLE produto (
-idproduto int not null primary key AUTO_INCREMENT,
+idproduto int NOT NULL PRIMARY KEY AUTO_INCREMENT,
 nomeProduto varchar(45),
 preco int,
 codigo int);

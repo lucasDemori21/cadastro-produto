@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Fev-2023 às 01:20
--- Versão do servidor: 10.4.27-MariaDB
--- versão do PHP: 8.2.0
+-- Generation Time: 23-Fev-2023 às 19:30
+-- Versão do servidor: 5.7.17
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `estoque`
+-- Database: `estoque`
 --
 
 -- --------------------------------------------------------
@@ -32,38 +33,34 @@ CREATE TABLE `produto` (
   `nomeProduto` varchar(255) DEFAULT NULL,
   `preco` int(11) DEFAULT NULL,
   `codigo` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `produto`
 --
 
 INSERT INTO `produto` (`idproduto`, `nomeProduto`, `preco`, `codigo`) VALUES
-(1, 'Carnes', 200, 123580),
-(2, 'Sabonete', 123, 12300),
-(3, 'Prato', 5, 12345),
-(4, 'Fone de ouvido', 80, 321654);
+(12, 'Teste', 123, 1234533355);
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `produto`
+-- Indexes for table `produto`
 --
 ALTER TABLE `produto`
   ADD PRIMARY KEY (`idproduto`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `produto`
+-- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `idproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-COMMIT;
+  MODIFY `idproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

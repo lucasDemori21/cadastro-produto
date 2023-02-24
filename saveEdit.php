@@ -11,6 +11,5 @@ require_once "servidor.php";
 
     $result = $connect->query($sqlUpdate);
 
-
 header('Location: consulta.php');
 ?>

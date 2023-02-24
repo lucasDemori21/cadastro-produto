@@ -36,15 +36,22 @@ if(!empty($_GET['id'])){
 
 <body>
     <div class="containerp">
-
-        <form class="formC" action="saveEdit.php" method="POST">
-            <h3>Editar informações</h3></br>
-            <input type="text" id="nomeProduto" name="nomeProduto" value="<?php echo $nome ?>"><br />
-            <input type="text" id="preco" name="preco" value="<?php echo $preco ?>"><br />
-            <input type="text" id="codigo" name="codigo" value="<?php echo $codigo ?>"><br /><br />
+        <form class="formC" action="saveEdit.php" method="POST"> 
+            <div class="botaoConsulta">
+                <a href="consulta.php"><button type="button">Voltar</button></a>
+            </div>
+            <div class="titulo">
+                <legend>EDITAR CADASTRO</legend>
+            </div>
+            <input class="inputC" type="text" id="nomeProduto" name="nomeProduto" value="<?php echo $nome ?>"><br />
+            <input class="inputC" type="text" id="preco" name="preco" value="<?php echo $preco ?>"><br />
+            <input class="inputC" type="text" id="codigo" name="codigo" value="<?php echo $codigo ?>"><br /><br />
             <input type="hidden" name="idproduto" id="idproduto" value="<?php echo $id ?>">
-            <button class="botaoCadastrar" type="submit" name="update" id="update">Atualizar</button>
-            <a style="text-decoration: none; width: 100%; display: flex; justify-content: center;" href="/desafio2/consulta.php"><button class="botaoCadastrar" type="button" href="consulta.php">Voltar</button></a>
+            
+            <div class="botaoCadastrar">
+                <a><button type="submit" name="update" id="update">Atualizar</button></a>
+            </div>
+
         </form>
     </div>
 </body>

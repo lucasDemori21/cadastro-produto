@@ -11,5 +11,21 @@ function searchData(){
 }
 
 function exibirStatus(){
-    alert('Cadastrado com sucesso!');
+
+    if (document.frmcadastrar.nomeProduto.value == "") {
+		alert("Preencha o campo Nome produto.");
+		document.frmcadastrar.nomeProduto.focus();
+		return false;
+	} else if (document.frmcadastrar.preco.value == "") {
+		alert("Preencha o campo Preço produto.");
+		document.frmcadastrar.preco.focus();
+		return false;
+	} else if (document.frmcadastrar.codigo.value == "") {
+		alert("Preencha o campo Código produto.");
+		document.frmcadastrar.codigo.focus();
+		return false;
+    }else{
+        alert("Cadastro realizado com succeso!");
+        return true;
+    }
 }

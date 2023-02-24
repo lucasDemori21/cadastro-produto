@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
 </head>
 
 <body>
-<?php
+    <?php
 require_once "servidor.php";
 
 if(!empty($_GET['pesquisar'])){
@@ -28,16 +28,18 @@ $result = $connect->query($sql);
 
 ?>
     <div class="containerp">
-        <form action="" name="formSearch">
-            <div class="navegacao">
-                <button class="botaoCadastrar"><a href="index.php">Cadastrar</a></button>
-                <button class="botaoCadastrar"><a href="consulta.php">Consultar</a></button>
+        <form action="" name="formSearch" class="formC">
+        <div class="botaoConsulta">
+                <a href="index.php"><button type="button">Cadastrar</button></a>
             </div>
-            <div style="width: 100%; display: flex; justify-content: center; gap: 1%;">
-                <input type="search" class="form-control w-75" style="height: 33px;"  placeholder='Pesquisar' id='pesquisar' name="pesquisar">
+            <div class="box-search">
+                <input type="search" class="form-control w-50" style="height: 33px;" placeholder='Pesquisar'
+                    id='pesquisar' name="pesquisar">
                 <button onclick="searchData()" class="btn btn-sm btn-primary">
-                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'>
-                        <path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/>
+                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor'
+                        class='bi bi-search' viewBox='0 0 16 16'>
+                        <path
+                            d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z' />
                     </svg>
                 </button>
             </div>
@@ -79,12 +81,5 @@ $result = $connect->query($sql);
         </form>
     </div>
 </body>
-    <script>
-        var search = document.getElementById['pesquisar'].value;
-    
-        function searchData(){
-            window.location = '/desafio2/consulta.php?search='+ search.value;
-        }
-    </script>
 
 </html>

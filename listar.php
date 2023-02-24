@@ -6,9 +6,11 @@ $preco = $_POST["preco"];
 $codigo = $_POST["codigo"];
 
 $sql = "INSERT INTO produto (idproduto, nomeProduto, preco, codigo) 
-VALUES (null,'" . $nomeProdudo . "', $preco, $codigo)";
+VALUES (null, '" .$nomeProdudo. "', $preco, $codigo)";
+
 
 $result = $connect->query($sql);
 
-header('Location: index.php');
+
+header('Location: index.php')
 ?>
